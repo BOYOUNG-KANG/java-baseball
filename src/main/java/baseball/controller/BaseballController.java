@@ -10,5 +10,12 @@ public class BaseballController {
     public void startGame(){
         outputView.printGameStart();
     }
-    
+    private List<Integer> setRandomNumber(){
+        BaseballRandomNumberGenerator generator = new BaseballRandomNumberGenerator();
+        return generator.generateRandomNumber();
+    }
+    public void playGame(){
+        List<Integer> randomNumbers = setRandomNumber();
+
+    }
 }

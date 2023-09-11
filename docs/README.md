@@ -31,8 +31,8 @@
 - 게임의 전체적인 흐름을 관리하는 로직
   - [x] 게임 시작
     - [x] 게임 시작 문구 출력
-  - [ ] 상대방 숫자 생성
   - [ ] 게임 진행
+    - [x] 상대방 숫자 생성
     - [ ] 플레이어 숫자 입력 받기 ( -> PlayerNumber )
     - [ ] 결과 비교하기
     - [ ] 결과 출력하기 
@@ -46,8 +46,8 @@
 ### Domain
 #### BaseballRandomNumberGenerator
 - 상대방 숫자 생성하는 로직
-  - [ ] 1에서 9까지 서로 다른 임의의 수 3개의 랜덤값 뽑기
-    - [ ] camp.nextstep.edu.missionutils에서 제공하는 Randoms 및 Console API를 사용
+  - [x] 1에서 9까지 서로 다른 임의의 수 3개의 랜덤값 뽑기
+    - [x] camp.nextstep.edu.missionutils에서 제공하는 Randoms 및 Console API를 사용
 #### PlayerNumber
 - 플레이어 숫자 관리하는 로직
   - [ ] 플레이어 숫자 입력값 예외 처리
@@ -88,7 +88,8 @@
   - [ ] 게임 종료 메시지
   - [ ] 게임 재시작 여부 메시지
 ### Constant
-#### BaseballResultContstant
+#### BaseballContstant
 - 게임에서 사용할 상수를 관리하는 클래스
+  - [x] 랜던 숫자 생성 시 사용한 범위 상수 추가
   - [ ] 게임 결과 상수 추가
   - [ ] 게임 재시작 여부 상수 추가
