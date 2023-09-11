@@ -53,7 +53,7 @@
   - [ ] 플레이어 숫자 입력값 예외 처리
     - [ ] 1부터 9까지 서로 다른 3자리 수 아닐 경우 예외 처리
     - [ ] IllegalArgumentException 발생 후 애플리케이션 종료
-  - [ ] 플레이어 숫자 정보 저장
+  - [x] 플레이어 숫자 정보 저장
 #### BaseballNumberComparator
 - 결과 비교하는 로직
   - [ ] 플레이어 숫자와 상대방 숫자 비교하여 맞힌 만큼의 결과 비교
@@ -69,8 +69,8 @@
 ### View 
 #### InputView
 - 플레이어에게 입력받을 데이터 처리하는 로직
-  - [ ] 플레이어 숫자 입력 받기
-    - [ ] camp.nextstep.edu.missionutils.Console의 readLine()을 활용
+  - [x] 플레이어 숫자 입력 받기
+    - [x] camp.nextstep.edu.missionutils.Console의 readLine()을 활용
   - [ ] 재시작 여부 입력 받기
     - [ ] camp.nextstep.edu.missionutils.Console의 readLine()을 활용
   
@@ -84,7 +84,7 @@
 #### GameMessage
 - 게임에서 사용할 메시지를 관리하는 클래스
   - [x] 게임 시작 메시지
-  - [ ] 숫자 입력 받기 메시지
+  - [x] 숫자 입력 받기 메시지
   - [ ] 게임 종료 메시지
   - [ ] 게임 재시작 여부 메시지
 ### Constant
