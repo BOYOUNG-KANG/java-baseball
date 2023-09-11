@@ -33,7 +33,7 @@
     - [x] 게임 시작 문구 출력
   - [ ] 게임 진행
     - [x] 상대방 숫자 생성
-    - [ ] 플레이어 숫자 입력 받기 ( -> PlayerNumber )
+    - [x] 플레이어 숫자 입력 받기 ( -> PlayerNumber )
     - [ ] 결과 비교하기
     - [ ] 결과 출력하기 
       - [ ] 결과가 '3스트라이크'일 경우, 게임 종료 문구 출력 후 '게임 재시작'으로 이동
@@ -50,9 +50,9 @@
     - [x] camp.nextstep.edu.missionutils에서 제공하는 Randoms 및 Console API를 사용
 #### PlayerNumber
 - 플레이어 숫자 관리하는 로직
-  - [ ] 플레이어 숫자 입력값 예외 처리
-    - [ ] 1부터 9까지 서로 다른 3자리 수 아닐 경우 예외 처리
-    - [ ] IllegalArgumentException 발생 후 애플리케이션 종료
+  - [x] 플레이어 숫자 입력값 예외 처리
+    - [x] 1부터 9까지 서로 다른 3자리 수 아닐 경우 예외 처리
+    - [x] IllegalArgumentException 발생 후 애플리케이션 종료
   - [x] 플레이어 숫자 정보 저장
 #### BaseballNumberComparator
 - 결과 비교하는 로직

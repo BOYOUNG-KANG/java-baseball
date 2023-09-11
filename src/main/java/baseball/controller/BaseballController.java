@@ -1,6 +1,7 @@
 package baseball.controller;
 
 import baseball.domain.BaseballRandomNumberGenerator;
+import baseball.domain.PlayerNumber;
 import baseball.view.InputView;
 import baseball.view.OutputView;
 
@@ -18,6 +19,7 @@ public class BaseballController {
     }
     public void playGame(){
         List<Integer> randomNumbers = setRandomNumber();
-        inputView.getPlayerNumber();
+        PlayerNumber playerNumber = new PlayerNumber();
+        playerNumber.updatePlayerNumbers(inputView.getPlayerNumber());
     }
 }
