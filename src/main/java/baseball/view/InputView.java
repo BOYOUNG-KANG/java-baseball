@@ -7,7 +7,7 @@ import java.util.List;
 
 public class InputView {
     public String getPlayerNumber(){
-        System.out.println(GameMessage.INPUT_NUMBER_MESSAGE);
+        System.out.print(GameMessage.INPUT_NUMBER_MESSAGE);
         return Console.readLine();
     }
 }
