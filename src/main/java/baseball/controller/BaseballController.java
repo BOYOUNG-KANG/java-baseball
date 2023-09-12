@@ -1,6 +1,8 @@
 package baseball.controller;
 
+import baseball.constant.BaseballConstant;
 import baseball.domain.BaseballRandomNumberGenerator;
+import baseball.domain.GameRestartChecker;
 import baseball.domain.PlayerNumber;
 import baseball.domain.ScoreCalculator;
 import baseball.view.InputView;
@@ -14,12 +16,16 @@ public class BaseballController {
     public void startGame(){
         outputView.printGameStart();
     }
-    private List<Integer> setRandomNumber(){
+    private List<Integer> createRandomNumber(){
         BaseballRandomNumberGenerator generator = new BaseballRandomNumberGenerator();
         return generator.generateRandomNumber();
     }
-    public void playGame(){
-        List<Integer> randomNumbers = setRandomNumber();
+    public void setRandomNumber(){
+        List<Integer> randomNumbers = createRandomNumber();
+        playGame(randomNumbers);
+    }
+
+    private void playGame(List<Integer> randomNumbers) {
         PlayerNumber playerNumber = new PlayerNumber();
         playerNumber.updatePlayerNumbers(inputView.getPlayerNumber());
         List<Integer> playerNumbers = playerNumber.getPlayerNumbers();
@@ -29,8 +35,15 @@ public class BaseballController {
 
         printScore(calculator);
     }
-    private void printScore(ScoreCalculator calculator){
 
+    private void restartGame(){
+        GameRestartChecker checker = new GameRestartChecker();
+        int restart = checker.checkRestart(inputView.getRestartYn());
+        if (restart == BaseballConstant.RESTART) {
+            setRandomNumber();
+        }
+    }
+    private void printScore(ScoreCalculator calculator){
         int strike = calculator.getStrike();
         int ball = calculator.getBall();
         int nothing = calculator.getNothing();
