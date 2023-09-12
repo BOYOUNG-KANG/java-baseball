@@ -34,6 +34,7 @@ public class BaseballController {
         calculator.calculateNumbers(randomNumbers, playerNumbers);
 
         printScore(calculator);
+        checkEndYn(calculator, randomNumbers);
     }
 
     private void restartGame(){
@@ -41,6 +42,15 @@ public class BaseballController {
         int restart = checker.checkRestart(inputView.getRestartYn());
         if (restart == BaseballConstant.RESTART) {
             setRandomNumber();
+        }
+    }
+    private void checkEndYn(ScoreCalculator calculator, List<Integer> randomNumbers){
+        int strike = calculator.getStrike();
+        if (strike == 3) {
+            restartGame();
+        }
+        if (strike != 3) {
+            playGame(randomNumbers);
         }
     }
     private void printScore(ScoreCalculator calculator){
