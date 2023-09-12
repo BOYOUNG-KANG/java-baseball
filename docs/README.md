@@ -71,8 +71,8 @@
 - 플레이어에게 입력받을 데이터 처리하는 로직
   - [x] 플레이어 숫자 입력 받기
     - [x] camp.nextstep.edu.missionutils.Console의 readLine()을 활용
-  - [ ] 재시작 여부 입력 받기
-    - [ ] camp.nextstep.edu.missionutils.Console의 readLine()을 활용
+  - [x] 재시작 여부 입력 받기
+    - [x] camp.nextstep.edu.missionutils.Console의 readLine()을 활용
   
 #### OutputView
 - 플레이어에게 출력할 데이터 처리하는 로직
@@ -86,7 +86,7 @@
   - [x] 게임 시작 메시지
   - [x] 숫자 입력 받기 메시지
   - [x] 게임 종료 메시지
-  - [ ] 게임 재시작 여부 메시지
+  - [x] 게임 재시작 여부 메시지
 ### Constant
 #### BaseballContstant
 - 게임에서 사용할 상수를 관리하는 클래스
