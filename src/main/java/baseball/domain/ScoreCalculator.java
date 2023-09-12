@@ -50,5 +50,4 @@ public class ScoreCalculator {
         }
         return strike;
     }
-
 }
