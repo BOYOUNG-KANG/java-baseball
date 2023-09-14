@@ -1,6 +1,7 @@
 package baseball.domain;
 
 import baseball.constant.BaseballConstant;
+import baseball.message.ValidateErrorMessage;
 
 import java.util.*;
 
@@ -18,9 +19,10 @@ public class PlayerNumber {
         this.playerNumbers = validatedPlayerNumbers;
     }
     private List<Integer> validate(String playerNumbers) {
-        if (isNotLength3 (playerNumbers) || isInclude0(playerNumbers) || hasSameDigit(playerNumbers)){
-            throw new IllegalArgumentException();
-        }
+        if (isNotLength3(playerNumbers)) throw new IllegalArgumentException(ValidateErrorMessage.NUMBERS_LENGTH_ERROR);
+        if (isInclude0(playerNumbers)) throw new IllegalArgumentException(ValidateErrorMessage.NUMBERS_INCLUDE_ZERO);
+        if (hasSameDigit(playerNumbers)) throw new IllegalArgumentException(ValidateErrorMessage.NUMBERS_SAME_DIGIT_ERROR);
+
         return convertToInteger(playerNumbers);
     }
 
@@ -42,7 +44,7 @@ public class PlayerNumber {
                     .map(Integer::parseInt)
                     .collect(Collectors.toList());
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException(e);
+            throw new IllegalArgumentException(ValidateErrorMessage.NOT_ONLY_NUMBER_ERROR);
         }
     }
 }

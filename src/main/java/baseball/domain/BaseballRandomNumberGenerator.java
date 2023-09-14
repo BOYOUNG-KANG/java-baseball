@@ -23,5 +23,4 @@ public class BaseballRandomNumberGenerator {
             randomNumbers.add(randomNumber);
         }
     }
-
 }
