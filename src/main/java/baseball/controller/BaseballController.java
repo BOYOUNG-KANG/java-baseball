@@ -64,45 +64,49 @@ public class BaseballController {
         int ball = calculator.getBall();
         int nothing = calculator.getNothing();
 
-        printStrike3(strike);
-        printNothing(nothing);
-        printOnlyStrike(strike, ball);
-        printOnlyBall(strike, ball);
-        printStrikeAndBall(strike, ball);
+        printScoreAccordingToResult(strike, ball, nothing);
+    }
+
+    private void printScoreAccordingToResult(int strike, int ball, int nothing) {
+        if (strike == 3) {
+            printStrike3(strike);
+        }
+        if (nothing == 1) {
+            printNothing();
+        }
+        if (0 < strike && strike < 3 && ball == 0) {
+            printOnlyStrike(strike);
+        }
+        if (0 < ball && strike == 0) {
+            printOnlyBall(ball);
+        }
+        if (0 < strike && strike < 3 && 0 < ball){
+            printStrikeAndBall(strike, ball);
+        }
     }
 
     private void printStrikeAndBall(int strike, int ball) {
-        if (0 < strike && strike < 3 && 0 < ball){
             outputView.printScoreBall(ball);
             outputView.printScoreStrike(strike);
             System.out.println();
-        }
     }
 
-    private void printOnlyBall(int strike, int ball) {
-        if (0 < ball && strike == 0) {
+    private void printOnlyBall(int ball) {
             outputView.printScoreBall(ball);
             System.out.println();
-        }
     }
 
-    private void printOnlyStrike(int strike, int ball) {
-        if (0 < strike && strike < 3 && ball == 0) {
+    private void printOnlyStrike(int strike) {
             outputView.printScoreStrike(strike);
             System.out.println();
-        }
     }
 
-    private void printNothing(int nothing) {
-        if (nothing == 1) {
+    private void printNothing() {
             outputView.printScoreNothing();
-        }
     }
 
     private void printStrike3(int strike) {
-        if (strike == 3) {
             outputView.printScoreStrike(strike);
             outputView.printGameEnd();
-        }
     }
 }
