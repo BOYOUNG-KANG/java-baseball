@@ -13,14 +13,20 @@ import java.util.List;
 public class BaseballController {
     OutputView outputView = new OutputView();
     InputView inputView = new InputView();
-    public void startGame(){
+
+    public void game(){
+        startGame();
+        setRandomNumber();
+    }
+    private void startGame(){
         outputView.printGameStart();
     }
+
     private List<Integer> createRandomNumber(){
         BaseballRandomNumberGenerator generator = new BaseballRandomNumberGenerator();
         return generator.generateRandomNumber();
     }
-    public void setRandomNumber(){
+    private void setRandomNumber(){
         List<Integer> randomNumbers = createRandomNumber();
         playGame(randomNumbers);
     }
